@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mealji-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "--port", "5179"],
+      "port": 5179
+    },
+    {
+      "name": "mealji-dist",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5180", "--directory", "dist"],
+      "port": 5180
+    }
+  ]
+}

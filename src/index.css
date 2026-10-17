@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-[#FAF7F0] text-[#1a2327] antialiased overflow-x-hidden;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #F15A24;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+
+  /* Ornate divider flourish */
+  .ornament-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #061C20;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #F15A24;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d94917;
+  }
+}
+
+/* Glass and glow effects */
+.glass-dark {
+  background: rgba(6, 28, 32, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.text-shadow-hero {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.text-stroke-title {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Hide scrollbars on horizontally scrollable rows */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Large-screen scaling for sections built with fixed px sizes, so they grow
+   in step with the proportional (vw / cqw based) sections on wide monitors. */
+@media (min-width: 1800px) { .scale-wide { zoom: 1.12; } }
+@media (min-width: 2100px) { .scale-wide { zoom: 1.25; } }
+@media (min-width: 2400px) { .scale-wide { zoom: 1.4; } }
+@media (min-width: 2800px) { .scale-wide { zoom: 1.6; } }
+@media (min-width: 3400px) { .scale-wide { zoom: 1.9; } }
+
+/* ------------------------------------------------------------------
+   Smooth UI: a short, opacity-only fade when switching pages.
+   (No hide-until-scrolled effects — content is always visible immediately.)
+------------------------------------------------------------------- */
+@keyframes page-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.page-enter { animation: page-in 0.35s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter { animation: none; }
+}
+
+/* Reserves the fixed navbar's height on pages that start with a full-bleed banner.
+   --nav-h is measured live from the <header> in App.jsx; 100px / 61px are first-paint fallbacks. */
+.nav-spacer { height: var(--nav-h, 100px); }
+@media (min-width: 768px) { .nav-spacer { height: var(--nav-h, 61px); } }
