@@ -202,12 +202,12 @@ export default function Navbar({ currentView = 'home', setCurrentView }) {
         {/* ===================================================
             MOBILE CTA
         ==================================================== */}
-        <a
+        {/* <a
           href="#reservation"
           className="md:hidden inline-flex items-center px-5 h-[38px] bg-[#FF5425] text-white text-[13px] font-semibold rounded-[4px] active:scale-95 transition-transform"
         >
           Book a Table
-        </a>
+        </a> */}
 
       </div>
 
