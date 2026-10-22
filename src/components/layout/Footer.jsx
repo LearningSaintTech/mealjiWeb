@@ -169,7 +169,7 @@ export default function Footer() {
             {/* Social Media Links */}
             <div className="flex items-center gap-3">
               <span className="text-xs text-white/50 tracking-wider">
-                Social Meida:
+                Social Media:
               </span>
               <div className="flex items-center gap-2">
                 <a
