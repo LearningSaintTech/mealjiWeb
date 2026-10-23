@@ -99,10 +99,24 @@ export default function ReservationSection() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+ const WHATSAPP_NUMBER = "917303141124"; // Replace with your WhatsApp number
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const message = `
+New Enquiry
+
+Service: ${selectedService}
+Name: ${formData.name}
+Phone: ${formData.phone}
+Address: ${formData.address}
+  `.trim();
+
+  const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+};
 
   return (
     <section

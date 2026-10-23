@@ -6,8 +6,8 @@ export default function StartersMenuSection() {
 
   const categories = [
     { id: 'main', label: 'Indian Breads' },
-    { id: 'desserts', label: 'Rice' },
-    { id: 'seafood', label: 'Dry & semi-Dry sabji' },
+    { id: 'rice', label: 'Rice' },
+    { id: 'sabji', label: 'Dry & semi-Dry sabji' },
     { id: 'biryani', label: 'Biryani' },
   ];
 
@@ -16,41 +16,41 @@ export default function StartersMenuSection() {
       {
         name: 'Plain Chapati',
         // ingredients: 'wheat',
-        price: '₹10/-',
+        price: '₹10/each',
         // extra: 'Extra Free Juice',
       },
       {
         name: 'Plain Paratha',
         // ingredients: 'wheat',
-        price: '₹40/-',
+        price: '₹40/each',
         // extra: 'Extra Free Juice',
       },
       {
         name: 'Aloo Paratha',
         // ingredients: '',
-        price: '₹60/-',
+        price: '₹60/each',
         // extra: 'Extra Free Juice',
       },
       {
         name: 'Sattu Paratha',
         // ingredients: 'Ricotta / Goat Cheese / Beetroot',
-        price: '₹70/-',
+        price: '₹70/each',
         // extra: 'Extra Free Juice',
       },
       {
         name: 'Mooli Paratha',
         // ingredients: 'Ricotta / Goat Cheese / Beetroot',
-        price: '₹60/-',
+        price: '₹60/each',
         // extra: 'Extra Free Juice',
       },
       {
         name: 'Gobhi Paratha',
         // ingredients: 'Ricotta / Goat Cheese / Beetroot',
-        price: '₹70/-',
+        price: '₹70/each',
         // extra: 'Extra Free Juice',
       },
     ],
-    desserts: [
+    rice: [
       {
         name: 'Steamed Rice',
         // ingredients: 'Warm Cardamom Syrup / Pista Garnish',
@@ -58,7 +58,7 @@ export default function StartersMenuSection() {
         // extra: 'Fresh Daily Batch',
       },
       {
-        name: 'Jeera rice',
+        name: 'Jeera Rice',
         // ingredients: 'Roasted Semolina / Cashews / Raisins',
         price: '₹70/-',
         // extra: 'Fresh Daily Batch',
@@ -84,13 +84,13 @@ export default function StartersMenuSection() {
         // extra: 'Warm Comfort',
       },
       {
-        name: 'Lemon rice',
+        name: 'Lemon Rice',
         // ingredients: 'Pure Desi Ghee / Roasted Lentils',
         price: '₹90/-',
         // extra: 'Warm Comfort',
       },
     ],
-    seafood: [
+    sabji: [
       {
         name: 'Aloo matar',
         // ingredients: 'Coconut Milk / Kokum / Curry Leaves',
@@ -106,7 +106,7 @@ export default function StartersMenuSection() {
       {
         name: 'Methi Matar',
         // ingredients: 'Ajwain Spiced Gram Flour / Mint Dip',
-        price: '₹120/-',
+        price: '₹110/-',
         // extra: 'Tawa Roasted',
       },
       {
@@ -120,13 +120,13 @@ export default function StartersMenuSection() {
       {
         name: 'Veg Biryani',
         // ingredients: 'Thick Cream Curd / Cardamom / Malai',
-        price: '₹160/-',
+        price: '₹100/-',
         // extra: 'Served Chilled',
       },
       {
         name: 'Paneer Biryani',
         // ingredients: 'Roasted Jeera / Mint / Rock Salt',
-        price: '₹160/-',
+        price: '₹120/-',
         // extra: 'Digestive Special',
       },
       {
@@ -138,20 +138,20 @@ export default function StartersMenuSection() {
       {
         name: 'Mutton Biryani',
         // ingredients: 'Assam CTC Tea / Crushed Ginger / Cardamom',
-        price: '₹120/-',
+        price: '₹180/-',
         // extra: 'Hot Brewed',
       },
 
        {
         name: 'Hyderabadi Biryani',
         // ingredients: 'Assam CTC Tea / Crushed Ginger / Cardamom',
-        price: '₹120/-',
+        price: '₹180/-',
         // extra: 'Hot Brewed',
       },
        {
         name: 'Mutton Biryani',
         // ingredients: 'Assam CTC Tea / Crushed Ginger / Cardamom',
-        price: '₹120/-',
+        price: '₹180/-',
         // extra: 'Hot Brewed',
       },
     ],
